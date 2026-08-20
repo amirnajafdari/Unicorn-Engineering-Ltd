@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Unicorn Engineering Ltd</title>
+  <meta name="description" content="Structural steel fabrication, metal frameworks, welding and bespoke parts manufacture from Unicorn Engineering Ltd." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/icon-unicorn.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo-unicorn.png" alt="Unicorn Engineering Ltd" />
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html"    class="nav__link">Home</a></li>
+          <li><a href="services.html" class="nav__link nav__link--active">Services</a></li>
+          <li><a href="projects.html" class="nav__link">Projects</a></li>
+          <li><a href="about.html"    class="nav__link">About</a></li>
+          <li><a href="contact.html"  class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <span class="header__phone">[Add phone number]</span>
+        <a href="contact.html" class="header__cta">Contact Us</a>
+        <button class="header__burger" aria-label="Menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__head">
+      <img src="images/logo-unicorn.png" class="mobile-nav__logo" alt="Unicorn Engineering Ltd" />
+      <button class="mobile-nav__close" onclick="closeMobileNav()" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="mobile-nav__links">
+      <a href="index.html"    class="mobile-nav__link">Home</a>
+      <a href="services.html" class="mobile-nav__link mobile-nav__link--active">Services</a>
+      <a href="projects.html" class="mobile-nav__link">Projects</a>
+      <a href="about.html"    class="mobile-nav__link">About</a>
+      <a href="contact.html"  class="mobile-nav__link">Contact</a>
+    </nav>
+    <div class="mobile-nav__footer">
+      <span class="mobile-nav__phone">[Add phone number]</span>
+      <a href="contact.html" class="mobile-nav__cta">Contact Us</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <span class="eyebrow">What We Offer</span>
+      <h1 class="page-hero__title">Our Services</h1>
+      <p class="page-hero__sub">Structural steel fabrication and manufacture of metal structures and parts of structures — from design through to site installation.</p>
+    </div>
+  </section>
+
+  <div class="svc-dark" style="background:var(--dark); padding: 2px 0 96px; border-top: 2px solid rgba(255,255,255,0.06);">
+    <div class="container">
+
+      <!-- 01 Structural -->
+      <div class="svc-detail" id="structural">
+        <div class="svc-detail__inner">
+          <div>
+            <div class="svc-detail__num">01</div>
+            <span class="svc-detail__tag">Design &amp; Manufacture</span>
+            <h2 class="svc-detail__title">Structural Steel Fabrication</h2>
+            <p class="svc-detail__body">We design, cut, weld and assemble structural steelwork in-house at our Park Works site — from individual beams and columns through to complete steel frameworks for industrial and commercial buildings.</p>
+            <p class="svc-detail__body">Every job is manufactured to the relevant engineering drawings and specifications, with material traceability and quality checks carried out throughout the fabrication process.</p>
+            <ul class="svc-detail__list">
+              <li>Structural steel beams, columns &amp; frameworks</li>
+              <li>CNC profile cutting &amp; forming</li>
+              <li>MIG / TIG welding &amp; assembly</li>
+              <li>Drilling, machining &amp; finishing</li>
+              <li>Delivery &amp; site installation</li>
+            </ul>
+          </div>
+          <div class="svc-detail__img-box">
+            <span class="svc-detail__img-label">Structural Steel Fabrication</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 Frameworks -->
+      <div class="svc-detail svc-detail--reverse" id="frameworks">
+        <div class="svc-detail__inner">
+          <div>
+            <div class="svc-detail__num">02</div>
+            <span class="svc-detail__tag">Frameworks &amp; Platforms</span>
+            <h2 class="svc-detail__title">Metal Structures &amp; Frameworks</h2>
+            <p class="svc-detail__body">We manufacture bespoke structural frameworks, platforms, walkways, stairs and support structures to your specification — engineered for industrial process plant, warehousing and commercial sites.</p>
+            <p class="svc-detail__body">From concept through to fabricated steelwork, our team works closely with contractors and engineers to deliver structures that fit first time.</p>
+            <ul class="svc-detail__list">
+              <li>Platforms, walkways &amp; access stairs</li>
+              <li>Equipment support structures</li>
+              <li>Mezzanine &amp; structural frameworks</li>
+              <li>Handrail &amp; guarding fabrication</li>
+              <li>Galvanising &amp; painting coordination</li>
+            </ul>
+          </div>
+          <div class="svc-detail__img-box">
+            <span class="svc-detail__img-label">Metal Structures &amp; Frameworks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 Welding -->
+      <div class="svc-detail" id="welding">
+        <div class="svc-detail__inner">
+          <div>
+            <div class="svc-detail__num">03</div>
+            <span class="svc-detail__tag">Welding &amp; Assembly</span>
+            <h2 class="svc-detail__title">Precision Welding &amp; Fabrication</h2>
+            <p class="svc-detail__body">Our welders and fabricators bring together decades of experience to deliver precision welding and fabrication of metal components and assemblies, finished to exacting tolerances.</p>
+            <p class="svc-detail__body">We work in mild steel, stainless steel and a range of structural sections, with every weld carried out to the relevant procedures and standards.</p>
+            <ul class="svc-detail__list">
+              <li>MIG, TIG &amp; MMA welding</li>
+              <li>Mild &amp; stainless steel fabrication</li>
+              <li>Sheet metal work</li>
+              <li>Assembly &amp; sub-assembly</li>
+              <li>Quality inspection &amp; finishing</li>
+            </ul>
+          </div>
+          <div class="svc-detail__img-box">
+            <span class="svc-detail__img-label">Precision Welding &amp; Fabrication</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 Parts -->
+      <div class="svc-detail svc-detail--reverse" id="parts">
+        <div class="svc-detail__inner">
+          <div>
+            <div class="svc-detail__num">04</div>
+            <span class="svc-detail__tag">Parts &amp; Components</span>
+            <h2 class="svc-detail__title">Bespoke Parts &amp; Components</h2>
+            <p class="svc-detail__body">We manufacture individual parts of structures and bespoke metal components to exact engineering drawings — supporting OEMs, contractors and maintenance teams with one-off and batch production.</p>
+            <p class="svc-detail__body">From prototype parts to repeat-order components, our in-house capability means fast turnaround without compromising on accuracy.</p>
+            <ul class="svc-detail__list">
+              <li>CNC profile cutting &amp; forming</li>
+              <li>Bespoke brackets &amp; fixings</li>
+              <li>Replacement &amp; repair parts</li>
+              <li>Small batch &amp; one-off production</li>
+              <li>Technical drawing review</li>
+            </ul>
+          </div>
+          <div class="svc-detail__img-box">
+            <span class="svc-detail__img-label">Bespoke Parts &amp; Components</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="certs-strip">
+    <div class="container">
+      <div class="certs-strip__inner">
+        <span class="certs-strip__label">What We Work With</span>
+        <div class="certs-strip__divider"></div>
+        <div class="certs-strip__items">
+          <span class="cert-badge">Mild Steel</span>
+          <span class="cert-badge">Stainless Steel</span>
+          <span class="cert-badge">Structural Sections</span>
+          <span class="cert-badge">CNC Profile Cutting</span>
+          <span class="cert-badge">MIG / TIG Welding</span>
+          <span class="cert-badge">Site Installation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <img src="images/logo-unicorn.png" class="footer__logo" alt="Unicorn Engineering Ltd" />
+        <p class="footer__tagline">Structural steel and metal fabrication specialists — manufacturing metal structures and parts of structures since 1982.</p>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.04 1.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Phone</span>
+            <span class="footer__value">[Add phone number]</span>
+          </span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Email</span>
+            <span class="footer__value">[Add email address]</span>
+          </span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Address</span>
+            <address class="footer__address">Park Works, Meadow Lane,<br />Ellesmere Port, South Wirral,<br />CH65 4EH</address>
+          </span>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe src="https://www.google.com/maps?q=Park+Works,+Meadow+Lane,+Ellesmere+Port,+CH65+4EH&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="footer__areas">
+      <span class="footer__areas-label">Areas We Serve</span>
+      <div class="footer__areas-pills">
+        <span class="footer__area-pill">📍 Ellesmere Port</span>
+        <span class="footer__area-pill">📍 Cheshire</span>
+        <span class="footer__area-pill">📍 Wirral</span>
+        <span class="footer__area-pill">📍 Chester</span>
+        <span class="footer__area-pill">📍 Merseyside</span>
+        <span class="footer__area-pill">📍 Liverpool</span>
+        <span class="footer__area-pill">📍 Manchester</span>
+        <span class="footer__area-pill">📍 North Wales</span>
+        <span class="footer__area-pill">📍 UK-Wide</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom" style="justify-content:center;">
+      <p>&copy; 2026 Unicorn Engineering Ltd. Incorporated 1982. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

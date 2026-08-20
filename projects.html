@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Unicorn Engineering Ltd</title>
+  <meta name="description" content="Structural steelwork and metal fabrication projects manufactured by Unicorn Engineering Ltd at our Ellesmere Port works." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/icon-unicorn.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo-unicorn.png" alt="Unicorn Engineering Ltd" />
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html"    class="nav__link">Home</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="projects.html" class="nav__link nav__link--active">Projects</a></li>
+          <li><a href="about.html"    class="nav__link">About</a></li>
+          <li><a href="contact.html"  class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <span class="header__phone">[Add phone number]</span>
+        <a href="contact.html" class="header__cta">Contact Us</a>
+        <button class="header__burger" aria-label="Menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__head">
+      <img src="images/logo-unicorn.png" class="mobile-nav__logo" alt="Unicorn Engineering Ltd" />
+      <button class="mobile-nav__close" onclick="closeMobileNav()" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="mobile-nav__links">
+      <a href="index.html"    class="mobile-nav__link">Home</a>
+      <a href="services.html" class="mobile-nav__link">Services</a>
+      <a href="projects.html" class="mobile-nav__link mobile-nav__link--active">Projects</a>
+      <a href="about.html"    class="mobile-nav__link">About</a>
+      <a href="contact.html"  class="mobile-nav__link">Contact</a>
+    </nav>
+    <div class="mobile-nav__footer">
+      <span class="mobile-nav__phone">[Add phone number]</span>
+      <a href="contact.html" class="mobile-nav__cta">Contact Us</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <span class="eyebrow">Our Work</span>
+      <h1 class="page-hero__title">Projects</h1>
+      <p class="page-hero__sub">A look at the structural steelwork and metal fabrication we manufacture at our Ellesmere Port works. Project photography coming soon.</p>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <div class="container" style="padding:0; max-width:none;">
+      <div class="filter-bar__inner" style="padding:0 48px;">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('structural', this)">Structural Steel</button>
+        <button class="filter-btn" onclick="filterProjects('frameworks', this)">Frameworks &amp; Platforms</button>
+        <button class="filter-btn" onclick="filterProjects('welding', this)">Welding &amp; Fabrication</button>
+        <button class="filter-btn" onclick="filterProjects('parts', this)">Bespoke Parts</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <section class="projects-section">
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="proj-card" data-cat="structural">
+        <span class="proj-card__tag">Structural Steel</span>
+        <div class="proj-card__placeholder"><span>Structural Steel</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Structural Steel Fabrication</div><div class="proj-card__title">Steel Frame Fabrication</div><div class="proj-card__loc">Ellesmere Port</div></div>
+      </div>
+      <div class="proj-card" data-cat="structural">
+        <span class="proj-card__tag">Structural Steel</span>
+        <div class="proj-card__placeholder"><span>Structural Steel</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Structural Steel Fabrication</div><div class="proj-card__title">Structural Beam &amp; Column Set</div><div class="proj-card__loc">Cheshire</div></div>
+      </div>
+      <div class="proj-card" data-cat="frameworks">
+        <span class="proj-card__tag">Frameworks</span>
+        <div class="proj-card__placeholder"><span>Frameworks &amp; Platforms</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Metal Structures &amp; Frameworks</div><div class="proj-card__title">Access Platform &amp; Walkway</div><div class="proj-card__loc">Wirral</div></div>
+      </div>
+      <div class="proj-card" data-cat="frameworks">
+        <span class="proj-card__tag">Frameworks</span>
+        <div class="proj-card__placeholder"><span>Frameworks &amp; Platforms</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Metal Structures &amp; Frameworks</div><div class="proj-card__title">Equipment Support Structure</div><div class="proj-card__loc">Merseyside</div></div>
+      </div>
+      <div class="proj-card" data-cat="welding">
+        <span class="proj-card__tag">Welding</span>
+        <div class="proj-card__placeholder"><span>Welding &amp; Fabrication</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Precision Welding &amp; Fabrication</div><div class="proj-card__title">Stainless Steel Assembly</div><div class="proj-card__loc">Chester</div></div>
+      </div>
+      <div class="proj-card" data-cat="welding">
+        <span class="proj-card__tag">Welding</span>
+        <div class="proj-card__placeholder"><span>Welding &amp; Fabrication</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Precision Welding &amp; Fabrication</div><div class="proj-card__title">Mild Steel Sub-Assembly</div><div class="proj-card__loc">Ellesmere Port</div></div>
+      </div>
+      <div class="proj-card" data-cat="parts">
+        <span class="proj-card__tag">Bespoke Parts</span>
+        <div class="proj-card__placeholder"><span>Bespoke Parts</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Bespoke Parts &amp; Components</div><div class="proj-card__title">Custom Bracket &amp; Fixing Set</div><div class="proj-card__loc">Liverpool</div></div>
+      </div>
+      <div class="proj-card" data-cat="parts">
+        <span class="proj-card__tag">Bespoke Parts</span>
+        <div class="proj-card__placeholder"><span>Bespoke Parts</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info"><div class="proj-card__cat">Bespoke Parts &amp; Components</div><div class="proj-card__title">CNC-Cut Replacement Parts</div><div class="proj-card__loc">North Wales</div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="projects-stats">
+    <div class="container">
+      <div class="projects-stats__inner">
+        <div class="ps-item">
+          <div class="ps-item__num">1982</div>
+          <div class="ps-item__label">Incorporated</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-item__num">40+</div>
+          <div class="ps-item__label">Years Trading</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-item__num">UK</div>
+          <div class="ps-item__label">Wide Delivery</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-item__num">In-House</div>
+          <div class="ps-item__label">Fabrication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band__inner">
+        <h2 class="cta-band__title">Got a project? Let's discuss it.</h2>
+        <div class="cta-band__actions">
+          <a href="contact.html" class="btn btn--dark">Get a Quote</a>
+          <a href="services.html" class="btn btn--dark" style="border-color:rgba(0,0,0,0.15);">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <img src="images/logo-unicorn.png" class="footer__logo" alt="Unicorn Engineering Ltd" />
+        <p class="footer__tagline">Structural steel and metal fabrication specialists — manufacturing metal structures and parts of structures since 1982.</p>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.04 1.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Phone</span>
+            <span class="footer__value">[Add phone number]</span>
+          </span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Email</span>
+            <span class="footer__value">[Add email address]</span>
+          </span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Address</span>
+            <address class="footer__address">Park Works, Meadow Lane,<br />Ellesmere Port, South Wirral,<br />CH65 4EH</address>
+          </span>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe src="https://www.google.com/maps?q=Park+Works,+Meadow+Lane,+Ellesmere+Port,+CH65+4EH&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="footer__areas">
+      <span class="footer__areas-label">Areas We Serve</span>
+      <div class="footer__areas-pills">
+        <span class="footer__area-pill">📍 Ellesmere Port</span>
+        <span class="footer__area-pill">📍 Cheshire</span>
+        <span class="footer__area-pill">📍 Wirral</span>
+        <span class="footer__area-pill">📍 Chester</span>
+        <span class="footer__area-pill">📍 Merseyside</span>
+        <span class="footer__area-pill">📍 Liverpool</span>
+        <span class="footer__area-pill">📍 Manchester</span>
+        <span class="footer__area-pill">📍 North Wales</span>
+        <span class="footer__area-pill">📍 UK-Wide</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom" style="justify-content:center;">
+      <p>&copy; 2026 Unicorn Engineering Ltd. Incorporated 1982. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.proj-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
