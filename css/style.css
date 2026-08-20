@@ -339,7 +339,9 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   max-width: 640px;
   height: auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06);
 }
 
 /* ======================================
