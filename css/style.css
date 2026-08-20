@@ -353,7 +353,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  gap: 20px;
 }
 .svc-card {
   background: var(--white);
@@ -363,6 +363,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   overflow: hidden;
   transition: background 0.3s;
   border: 1px solid var(--border-s);
+  border-radius: 16px;
 }
 .svc-card:hover { background: var(--grey-1); }
 .svc-card__img-wrap {
