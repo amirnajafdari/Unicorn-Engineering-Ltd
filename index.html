@@ -193,53 +193,35 @@
     </div>
   </section>
 
-  <!-- ABOUT TEASER -->
-  <section class="about-section">
+  <!-- PROJECT SHOWCASE (dynamic, auto-rotating) -->
+  <section class="showcase-section">
     <div class="container">
-      <div class="about-section__inner">
+      <div class="section-head">
         <div>
-          <span class="eyebrow">Who We Are</span>
-          <h2 class="about-section__title">Metal Fabrication Since 1982</h2>
-          <p class="about-section__body">Unicorn Engineering Ltd was incorporated on 15 April 1982 for the manufacture of metal structures and parts of structures. Since then, we've fabricated structural steelwork and bespoke metal components from our Park Works site in Ellesmere Port.</p>
-          <p class="about-section__body">Our in-house team handles every stage — from cutting and welding through to finishing and site installation — giving clients a single point of contact from drawing to delivery.</p>
-          <div class="about-section__cta">
-            <a href="about.html" class="btn btn--dark">Learn More About Us</a>
-          </div>
+          <span class="eyebrow">See Us In Action</span>
+          <h2 class="section-head__title">From the Workshop Floor</h2>
         </div>
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="about-stat__num">1982</div>
-            <div class="about-stat__label">Incorporated</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat__num">40+</div>
-            <div class="about-stat__label">Years Trading</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat__num">In-House</div>
-            <div class="about-stat__label">Design to Delivery</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat__num">Bespoke</div>
-            <div class="about-stat__label">Made to Order</div>
-          </div>
-        </div>
+        <a href="projects.html" class="section-head__link">View All Projects</a>
       </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES -->
-  <section class="industries-section">
-    <div class="container">
-      <span class="eyebrow">Who We Work With</span>
-      <h2 style="font-size:clamp(28px,3.5vw,44px); font-weight:800; color:var(--black); letter-spacing:-0.025em;">Industries We Serve</h2>
-      <div class="industries-grid">
-        <div class="industry-item"><span class="industry-item__num">01</span><span class="industry-item__name">Industrial &amp; Process Plant</span></div>
-        <div class="industry-item"><span class="industry-item__num">02</span><span class="industry-item__name">Construction &amp; Infrastructure</span></div>
-        <div class="industry-item"><span class="industry-item__num">03</span><span class="industry-item__name">Marine &amp; Port Facilities</span></div>
-        <div class="industry-item"><span class="industry-item__num">04</span><span class="industry-item__name">Energy &amp; Utilities</span></div>
-        <div class="industry-item"><span class="industry-item__num">05</span><span class="industry-item__name">Manufacturing &amp; OEMs</span></div>
-        <div class="industry-item"><span class="industry-item__num">06</span><span class="industry-item__name">Commercial Construction</span></div>
+      <div class="showcase-card" id="showcaseCard">
+        <div class="showcase-slide is-active" style="background-image:url('images/saw.jpg')">
+          <div class="showcase-slide__info"><span class="showcase-slide__cat">Fabrication</span><span class="showcase-slide__title">Structural Steel Cutting</span></div>
+        </div>
+        <div class="showcase-slide" style="background-image:url('images/piping.jpg')">
+          <div class="showcase-slide__info"><span class="showcase-slide__cat">Piping</span><span class="showcase-slide__title">Pipe Assembly &amp; Fitting</span></div>
+        </div>
+        <div class="showcase-slide" style="background-image:url('images/welding.jpg')">
+          <div class="showcase-slide__info"><span class="showcase-slide__cat">Welding</span><span class="showcase-slide__title">Precision Pipe Welding</span></div>
+        </div>
+        <div class="showcase-slide" style="background-image:url('images/Turner.jpg')">
+          <div class="showcase-slide__info"><span class="showcase-slide__cat">Milling</span><span class="showcase-slide__title">Precision Turning</span></div>
+        </div>
+        <div class="showcase-card__dots">
+          <button class="showcase-dot is-active" onclick="showcaseGoTo(0)" aria-label="Slide 1"></button>
+          <button class="showcase-dot" onclick="showcaseGoTo(1)" aria-label="Slide 2"></button>
+          <button class="showcase-dot" onclick="showcaseGoTo(2)" aria-label="Slide 3"></button>
+          <button class="showcase-dot" onclick="showcaseGoTo(3)" aria-label="Slide 4"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -325,6 +307,38 @@
       document.getElementById('mobileNav').classList.remove('is-open');
       document.body.style.overflow = '';
     }
+
+    (function () {
+      var card = document.getElementById('showcaseCard');
+      if (!card) return;
+      var slides = card.querySelectorAll('.showcase-slide');
+      var dots = card.querySelectorAll('.showcase-dot');
+      var current = 0;
+      var intervalMs = 4000;
+      var timer;
+
+      function show(index) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+      }
+
+      function next() { show(current + 1); }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, intervalMs);
+      }
+
+      window.showcaseGoTo = function (index) {
+        show(index);
+        startTimer();
+      };
+
+      startTimer();
+    })();
   </script>
 </body>
 </html>
