@@ -224,7 +224,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
    ====================================== */
 
 .hero {
-  padding: 100px 0 90px;
+  min-height: 640px;
   overflow: hidden;
   position: relative;
   background: #0a0a0a;
