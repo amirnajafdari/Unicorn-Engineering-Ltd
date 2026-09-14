@@ -92,40 +92,77 @@
   <!-- PROJECT SHOWCASE (dynamic, auto-rotating) -->
   <section class="showcase-section">
     <div class="container">
-      <div class="section-head">
-        <div>
+      <div class="showcase-section__grid">
+
+        <div class="showcase-info">
           <span class="eyebrow">See Us In Action</span>
           <h2 class="section-head__title">From the Workshop Floor</h2>
+
+          <div class="showcase-desc" id="showcaseDesc">
+            <div class="showcase-desc__item is-active">
+              <span class="showcase-desc__cat">Structural Steel</span>
+              <h3 class="showcase-desc__title">Stainless Steel Cyclone Vessel</h3>
+              <p class="showcase-desc__text">A fully welded stainless steel cyclone separator, fabricated in-house at Park Works and readied for site installation.</p>
+            </div>
+            <div class="showcase-desc__item">
+              <span class="showcase-desc__cat">Structural Steel</span>
+              <h3 class="showcase-desc__title">Cyclone Vessel — Site Install</h3>
+              <p class="showcase-desc__text">The same vessel pictured on site, showing the scale of the structural steel fabrication work we take on.</p>
+            </div>
+            <div class="showcase-desc__item">
+              <span class="showcase-desc__cat">Structural Steel</span>
+              <h3 class="showcase-desc__title">Steel Canopy Frame Erection</h3>
+              <p class="showcase-desc__text">A steel canopy frame erected onto an existing building, engineered and fitted by our team from design through to installation.</p>
+            </div>
+            <div class="showcase-desc__item">
+              <span class="showcase-desc__cat">Frameworks</span>
+              <h3 class="showcase-desc__title">Reservoir Access Platform &amp; Stairs</h3>
+              <p class="showcase-desc__text">A galvanised steel access platform and staircase, fabricated and installed at a reservoir site.</p>
+            </div>
+            <div class="showcase-desc__item">
+              <span class="showcase-desc__cat">Frameworks</span>
+              <h3 class="showcase-desc__title">Dam Access Platform &amp; Stairs</h3>
+              <p class="showcase-desc__text">Another access platform and stairway installation, built to withstand demanding outdoor environments.</p>
+            </div>
+            <div class="showcase-desc__item">
+              <span class="showcase-desc__cat">Frameworks</span>
+              <h3 class="showcase-desc__title">Viaduct Walkway &amp; Staircase</h3>
+              <p class="showcase-desc__text">A long-span steel walkway and staircase installed beneath a viaduct, showcasing our frameworks capability.</p>
+            </div>
+          </div>
+
+          <a href="projects.html" class="section-head__link">View All Projects</a>
         </div>
-        <a href="projects.html" class="section-head__link">View All Projects</a>
-      </div>
-      <div class="showcase-card" id="showcaseCard">
-        <div class="showcase-slide is-active" style="background-image:url('images/gallery-vessel-1.jpg')">
-          <div class="showcase-slide__info"><span class="showcase-slide__cat">Structural Steel</span><span class="showcase-slide__title">Stainless Steel Cyclone Vessel</span></div>
+
+        <div class="showcase-card" id="showcaseCard">
+          <div class="showcase-slide is-active" style="background-image:url('images/gallery-vessel-1.jpg')">
+            <div class="showcase-slide__info"><span class="showcase-slide__cat">Structural Steel</span><span class="showcase-slide__title">Stainless Steel Cyclone Vessel</span></div>
+          </div>
+          <div class="showcase-slide" style="background-image:url('images/gallery-vessel-2.jpg')">
+            <div class="showcase-slide__info"><span class="showcase-slide__cat">Structural Steel</span><span class="showcase-slide__title">Cyclone Vessel — Site Install</span></div>
+          </div>
+          <div class="showcase-slide" style="background-image:url('images/gallery-canopy-frame.jpg')">
+            <div class="showcase-slide__info"><span class="showcase-slide__cat">Structural Steel</span><span class="showcase-slide__title">Steel Canopy Frame Erection</span></div>
+          </div>
+          <div class="showcase-slide" style="background-image:url('images/gallery-platform-1.jpg')">
+            <div class="showcase-slide__info"><span class="showcase-slide__cat">Frameworks</span><span class="showcase-slide__title">Reservoir Access Platform &amp; Stairs</span></div>
+          </div>
+          <div class="showcase-slide" style="background-image:url('images/gallery-platform-2.jpg')">
+            <div class="showcase-slide__info"><span class="showcase-slide__cat">Frameworks</span><span class="showcase-slide__title">Dam Access Platform &amp; Stairs</span></div>
+          </div>
+          <div class="showcase-slide" style="background-image:url('images/gallery-viaduct-walkway.jpg')">
+            <div class="showcase-slide__info"><span class="showcase-slide__cat">Frameworks</span><span class="showcase-slide__title">Viaduct Walkway &amp; Staircase</span></div>
+          </div>
+          <div class="showcase-card__dots">
+            <button class="showcase-dot is-active" onclick="showcaseGoTo(0)" aria-label="Slide 1"></button>
+            <button class="showcase-dot" onclick="showcaseGoTo(1)" aria-label="Slide 2"></button>
+            <button class="showcase-dot" onclick="showcaseGoTo(2)" aria-label="Slide 3"></button>
+            <button class="showcase-dot" onclick="showcaseGoTo(3)" aria-label="Slide 4"></button>
+            <button class="showcase-dot" onclick="showcaseGoTo(4)" aria-label="Slide 5"></button>
+            <button class="showcase-dot" onclick="showcaseGoTo(5)" aria-label="Slide 6"></button>
+          </div>
         </div>
-        <div class="showcase-slide" style="background-image:url('images/gallery-vessel-2.jpg')">
-          <div class="showcase-slide__info"><span class="showcase-slide__cat">Structural Steel</span><span class="showcase-slide__title">Cyclone Vessel — Site Install</span></div>
-        </div>
-        <div class="showcase-slide" style="background-image:url('images/gallery-canopy-frame.jpg')">
-          <div class="showcase-slide__info"><span class="showcase-slide__cat">Structural Steel</span><span class="showcase-slide__title">Steel Canopy Frame Erection</span></div>
-        </div>
-        <div class="showcase-slide" style="background-image:url('images/gallery-platform-1.jpg')">
-          <div class="showcase-slide__info"><span class="showcase-slide__cat">Frameworks</span><span class="showcase-slide__title">Reservoir Access Platform &amp; Stairs</span></div>
-        </div>
-        <div class="showcase-slide" style="background-image:url('images/gallery-platform-2.jpg')">
-          <div class="showcase-slide__info"><span class="showcase-slide__cat">Frameworks</span><span class="showcase-slide__title">Dam Access Platform &amp; Stairs</span></div>
-        </div>
-        <div class="showcase-slide" style="background-image:url('images/gallery-viaduct-walkway.jpg')">
-          <div class="showcase-slide__info"><span class="showcase-slide__cat">Frameworks</span><span class="showcase-slide__title">Viaduct Walkway &amp; Staircase</span></div>
-        </div>
-        <div class="showcase-card__dots">
-          <button class="showcase-dot is-active" onclick="showcaseGoTo(0)" aria-label="Slide 1"></button>
-          <button class="showcase-dot" onclick="showcaseGoTo(1)" aria-label="Slide 2"></button>
-          <button class="showcase-dot" onclick="showcaseGoTo(2)" aria-label="Slide 3"></button>
-          <button class="showcase-dot" onclick="showcaseGoTo(3)" aria-label="Slide 4"></button>
-          <button class="showcase-dot" onclick="showcaseGoTo(4)" aria-label="Slide 5"></button>
-          <button class="showcase-dot" onclick="showcaseGoTo(5)" aria-label="Slide 6"></button>
-        </div>
+
       </div>
     </div>
   </section>
@@ -217,6 +254,8 @@
       if (!card) return;
       var slides = card.querySelectorAll('.showcase-slide');
       var dots = card.querySelectorAll('.showcase-dot');
+      var desc = document.getElementById('showcaseDesc');
+      var descItems = desc ? desc.querySelectorAll('.showcase-desc__item') : [];
       var current = 0;
       var intervalMs = 4000;
       var timer;
@@ -224,9 +263,11 @@
       function show(index) {
         slides[current].classList.remove('is-active');
         dots[current].classList.remove('is-active');
+        if (descItems[current]) descItems[current].classList.remove('is-active');
         current = (index + slides.length) % slides.length;
         slides[current].classList.add('is-active');
         dots[current].classList.add('is-active');
+        if (descItems[current]) descItems[current].classList.add('is-active');
       }
 
       function next() { show(current + 1); }
