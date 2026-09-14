@@ -55,6 +55,28 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero__bg" role="img" aria-label="Unicorn Engineering Ltd works, Ellesmere Port"></div>
+
+    <div class="hero-gallery" id="heroGallery">
+      <div class="hero-gallery__slide is-active" style="background-image:url('images/saw.jpg')">
+        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Fabrication</span><span class="hero-gallery__title">Structural Steel Cutting</span></div>
+      </div>
+      <div class="hero-gallery__slide" style="background-image:url('images/piping.jpg')">
+        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Piping</span><span class="hero-gallery__title">Pipe Assembly &amp; Fitting</span></div>
+      </div>
+      <div class="hero-gallery__slide" style="background-image:url('images/welding.jpg')">
+        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Welding</span><span class="hero-gallery__title">Precision Pipe Welding</span></div>
+      </div>
+      <div class="hero-gallery__slide" style="background-image:url('images/Turner.jpg')">
+        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Milling</span><span class="hero-gallery__title">Precision Turning</span></div>
+      </div>
+      <div class="hero-gallery__frame"></div>
+      <div class="hero-gallery__dots">
+        <button class="hero-gallery__dot is-active" onclick="heroGalleryGoTo(0)" aria-label="Slide 1"></button>
+        <button class="hero-gallery__dot" onclick="heroGalleryGoTo(1)" aria-label="Slide 2"></button>
+        <button class="hero-gallery__dot" onclick="heroGalleryGoTo(2)" aria-label="Slide 3"></button>
+        <button class="hero-gallery__dot" onclick="heroGalleryGoTo(3)" aria-label="Slide 4"></button>
+      </div>
+    </div>
   </section>
 
 
@@ -285,6 +307,38 @@
       }
 
       window.showcaseGoTo = function (index) {
+        show(index);
+        startTimer();
+      };
+
+      startTimer();
+    })();
+
+    (function () {
+      var box = document.getElementById('heroGallery');
+      if (!box) return;
+      var slides = box.querySelectorAll('.hero-gallery__slide');
+      var dots = box.querySelectorAll('.hero-gallery__dot');
+      var current = 0;
+      var intervalMs = 3200;
+      var timer;
+
+      function show(index) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+      }
+
+      function next() { show(current + 1); }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, intervalMs);
+      }
+
+      window.heroGalleryGoTo = function (index) {
         show(index);
         startTimer();
       };
