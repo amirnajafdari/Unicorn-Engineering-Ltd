@@ -251,6 +251,15 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   mix-blend-mode: multiply;
 }
 
+.hero__accent-bar {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  clip-path: polygon(0 78%, 0 100%, 100% 100%, 100% 46%, 54% 46%);
+  background: linear-gradient(100deg, rgba(200,16,46,0.94) 0%, rgba(150,0,31,0.9) 45%, rgba(10,10,10,0.88) 100%);
+}
+
 /* ── Hero gallery (dynamic photo box overlaid on the hero photo) ── */
 .hero-gallery {
   position: absolute;
