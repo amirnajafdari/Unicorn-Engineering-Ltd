@@ -224,7 +224,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
    ====================================== */
 
 .hero {
-  aspect-ratio: 1376 / 768;
+  aspect-ratio: 1376 / 668;
   overflow: hidden;
   position: relative;
   background: #0a0a0a;
@@ -233,7 +233,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url("../images/Unicorn Engineering Ltd.jpg");
+  background-image: url("../images/Unicorn Engineering Ltd - hero-crop.jpg");
   background-size: 100% 100%;
   background-position: center;
   z-index: 0;
