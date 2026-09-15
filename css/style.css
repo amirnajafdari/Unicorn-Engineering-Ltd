@@ -132,7 +132,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: var(--black);
+  color: var(--primary);
   white-space: nowrap;
 }
 .nav { flex: 1; display: flex; justify-content: center; }
