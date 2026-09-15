@@ -253,10 +253,12 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 
 .hero__accent-bar {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 46%;
+  bottom: 0;
   z-index: 1;
   pointer-events: none;
-  clip-path: polygon(0 78%, 0 100%, 100% 100%, 100% 46%, 60% 46%, 57.05% 46.19%, 54.21% 46.765%, 51.47% 47.72%, 48.84% 49.06%);
   background: linear-gradient(100deg, rgba(200,16,46,0.94) 0%, rgba(150,0,31,0.9) 45%, rgba(10,10,10,0.88) 100%);
 }
 
