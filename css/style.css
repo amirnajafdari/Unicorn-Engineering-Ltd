@@ -1508,6 +1508,15 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   .footer__bottom { padding: 14px 24px; flex-direction: column; gap: 8px; text-align: center; }
 }
 
+@media (max-width: 1000px) {
+  /* Header: switch to burger nav before the desktop nav/actions run out of room */
+  .nav { display: none; }
+  .header__actions { gap: 0; }
+  .header__cta { display: none; }
+  .header__phone { display: none; }
+  .header__burger { display: flex; }
+}
+
 @media (max-width: 768px) {
   /* Layout */
   .container { padding: 0 20px; }
@@ -1516,11 +1525,6 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   .header__inner { padding: 0 20px; height: 68px; }
   .header__logo img { height: 44px; }
   .header__logo-text { font-size: 18px; }
-  .nav { display: none; }
-  .header__actions { gap: 0; }
-  .header__cta { display: none; }
-  .header__phone { display: none; }
-  .header__burger { display: flex; }
 
   /* Process strip */
   .process-strip { position: static; top: auto; }
