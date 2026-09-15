@@ -882,6 +882,41 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 .cert-badge:hover { border-color: var(--primary); color: var(--primary); }
 
 /* ======================================
+   AREAS STRIP (about page)
+   ====================================== */
+
+.areas-strip {
+  background: var(--grey-0);
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.areas-strip__inner {
+  display: flex; align-items: center;
+  gap: 48px; flex-wrap: wrap;
+}
+.areas-strip__label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--grey-4); flex-shrink: 0; white-space: nowrap;
+}
+.areas-strip__divider {
+  width: 1px; height: 24px;
+  background: var(--grey-2); flex-shrink: 0;
+}
+.areas-strip__items { display: flex; gap: 10px; flex-wrap: wrap; }
+.area-badge {
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 13px; font-weight: 600;
+  color: var(--grey-5);
+  transition: border-color 0.2s, color 0.2s;
+}
+.area-badge:hover { border-color: var(--primary); color: var(--primary); }
+
+/* ======================================
    CTA BAND
    ====================================== */
 
@@ -1565,6 +1600,12 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   .certs-strip__inner { gap: 16px; flex-direction: column; align-items: flex-start; }
   .certs-strip__divider { display: none; }
   .certs-strip__items { gap: 8px; }
+
+  /* Areas */
+  .areas-strip { padding: 28px 0; }
+  .areas-strip__inner { gap: 16px; flex-direction: column; align-items: flex-start; }
+  .areas-strip__divider { display: none; }
+  .areas-strip__items { gap: 8px; }
 
   /* About (homepage) */
   .about-section { padding: 56px 0; }
