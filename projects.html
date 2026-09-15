@@ -60,20 +60,6 @@
     </div>
   </section>
 
-  <!-- FILTER -->
-  <div class="filter-bar">
-    <div class="container" style="padding:0; max-width:none;">
-      <div class="filter-bar__inner" style="padding:0 48px;">
-        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
-        <button class="filter-btn" onclick="filterProjects('structural', this)">Structural Steel</button>
-        <button class="filter-btn" onclick="filterProjects('frameworks', this)">Frameworks &amp; Platforms</button>
-        <button class="filter-btn" onclick="filterProjects('welding', this)">Welding &amp; Fabrication</button>
-        <button class="filter-btn" onclick="filterProjects('parts', this)">Bespoke Parts</button>
-        <button class="filter-btn" onclick="filterProjects('workshop', this)">Workshop &amp; Site</button>
-      </div>
-    </div>
-  </div>
-
   <!-- GRID -->
   <section class="projects-section">
     <div class="projects-grid" id="projectsGrid">
@@ -256,13 +242,6 @@
     function closeMobileNav() {
       document.getElementById('mobileNav').classList.remove('is-open');
       document.body.style.overflow = '';
-    }
-    function filterProjects(cat, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.proj-card').forEach(card => {
-        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
-      });
     }
   </script>
 
