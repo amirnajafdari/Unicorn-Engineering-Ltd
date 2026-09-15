@@ -1211,6 +1211,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 .svc-detail__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .svc-detail--reverse .svc-detail__inner { direction: rtl; }
 .svc-detail--reverse .svc-detail__inner > * { direction: ltr; }
+.svc-detail--text-only .svc-detail__inner { grid-template-columns: 1fr; max-width: 720px; }
 .svc-detail__num { font-size: 90px; font-weight: 800; color: rgba(200,16,46,0.06); line-height: 1; margin-bottom: -24px; }
 .svc-detail__tag { font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-4); margin-bottom: 16px; display: block; margin-top: 8px; }
 .svc-detail__title { font-size: 36px; font-weight: 800; color: var(--black); margin-bottom: 24px; }
