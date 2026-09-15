@@ -267,7 +267,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   z-index: 1;
   pointer-events: none;
   border-top: 4px solid rgba(255,255,255,0.92);
-  background: linear-gradient(100deg, rgba(200,16,46,0.94) 0%, rgba(150,0,31,0.9) 45%, rgba(10,10,10,0.88) 100%);
+  background: var(--primary);
 }
 
 /* ── Hero gallery (dynamic photo box overlaid on the hero photo) ── */
@@ -391,7 +391,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   text-shadow: 0 3px 14px rgba(0,0,0,0.7);
   margin-bottom: 14px;
 }
-.hero-intro__title span { color: var(--primary); }
+.hero-intro__title span { color: #0a0a0a; }
 .hero-intro__body {
   font-size: clamp(15px, 1.35vw, 18px);
   line-height: 1.65;
@@ -408,14 +408,14 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: var(--primary);
+  background: #0a0a0a;
   color: #ffffff;
   border-radius: 6px;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(200,16,46,0.4);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.4);
   transition: background 0.2s, transform 0.2s;
 }
-.hero-intro__cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.hero-intro__cta:hover { background: #1a1a1a; transform: translateY(-1px); }
 
 @media (max-width: 1024px) {
   .hero-intro__body { display: none; }
