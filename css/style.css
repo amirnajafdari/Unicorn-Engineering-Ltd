@@ -121,9 +121,9 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   justify-content: space-between;
   gap: 24px;
 }
-.header__logo { display: flex; align-items: flex-start; align-self: flex-start; text-decoration: none; }
+.header__logo { display: flex; align-items: center; text-decoration: none; }
 .header__logo img {
-  height: 160px;
+  height: 64px;
   width: auto;
   display: block;
   filter: none;
@@ -1512,7 +1512,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 
   /* Header */
   .header__inner { padding: 0 20px; height: 68px; }
-  .header__logo img { height: 108px; }
+  .header__logo img { height: 44px; }
   .nav { display: none; }
   .header__actions { gap: 0; }
   .header__cta { display: none; }
