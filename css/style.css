@@ -354,11 +354,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   right: 4%;
   top: 50%;
   z-index: 2;
-  padding: 28px 32px;
-  border-radius: 6px;
-  background: rgba(0,0,0,0.18);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  padding: 0 0 0 20px;
   border-left: 3px solid var(--primary);
 }
 .hero-intro__eyebrow {
