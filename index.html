@@ -58,25 +58,36 @@
     <div class="hero__accent-bar"></div>
 
     <div class="hero-gallery" id="heroGallery">
-      <div class="hero-gallery__slide is-active" style="background-image:url('images/gallery-hero-forklift.jpg')">
-        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Material Handling</span><span class="hero-gallery__title">Workshop Forklift</span></div>
+      <div class="hero-gallery__photo">
+        <div class="hero-gallery__slide is-active" style="background-image:url('images/gallery-hero-forklift.jpg')"></div>
+        <div class="hero-gallery__slide" style="background-image:url('images/gallery-hero-machine.jpg')"></div>
+        <div class="hero-gallery__slide" style="background-image:url('images/gallery-hero-building.jpg')"></div>
+        <div class="hero-gallery__slide" style="background-image:url('images/gallery-hero-crane.jpg')"></div>
+        <div class="hero-gallery__frame"></div>
       </div>
-      <div class="hero-gallery__slide" style="background-image:url('images/gallery-hero-machine.jpg')">
-        <div class="hero-gallery__caption"><span class="hero-gallery__cat">In-House Machining</span><span class="hero-gallery__title">Radial Arm Drilling</span></div>
-      </div>
-      <div class="hero-gallery__slide" style="background-image:url('images/gallery-hero-building.jpg')">
-        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Park Works</span><span class="hero-gallery__title">Our Ellesmere Port Workshop</span></div>
-      </div>
-      <div class="hero-gallery__slide" style="background-image:url('images/gallery-hero-crane.jpg')">
-        <div class="hero-gallery__caption"><span class="hero-gallery__cat">Material Handling</span><span class="hero-gallery__title">15-Tonne Overhead Crane</span></div>
-      </div>
-      <div class="hero-gallery__scrim"></div>
-      <div class="hero-gallery__frame"></div>
-      <div class="hero-gallery__dots">
-        <button class="hero-gallery__dot is-active" onclick="heroGalleryGoTo(0)" aria-label="Slide 1"></button>
-        <button class="hero-gallery__dot" onclick="heroGalleryGoTo(1)" aria-label="Slide 2"></button>
-        <button class="hero-gallery__dot" onclick="heroGalleryGoTo(2)" aria-label="Slide 3"></button>
-        <button class="hero-gallery__dot" onclick="heroGalleryGoTo(3)" aria-label="Slide 4"></button>
+      <div class="hero-gallery__bar">
+        <div class="hero-gallery__caption is-active">
+          <span class="hero-gallery__cat">Material Handling</span>
+          <span class="hero-gallery__title">Workshop Forklift</span>
+        </div>
+        <div class="hero-gallery__caption">
+          <span class="hero-gallery__cat">In-House Machining</span>
+          <span class="hero-gallery__title">Radial Arm Drilling</span>
+        </div>
+        <div class="hero-gallery__caption">
+          <span class="hero-gallery__cat">Park Works</span>
+          <span class="hero-gallery__title">Our Ellesmere Port Workshop</span>
+        </div>
+        <div class="hero-gallery__caption">
+          <span class="hero-gallery__cat">Material Handling</span>
+          <span class="hero-gallery__title">15-Tonne Overhead Crane</span>
+        </div>
+        <div class="hero-gallery__dots">
+          <button class="hero-gallery__dot is-active" onclick="heroGalleryGoTo(0)" aria-label="Slide 1"></button>
+          <button class="hero-gallery__dot" onclick="heroGalleryGoTo(1)" aria-label="Slide 2"></button>
+          <button class="hero-gallery__dot" onclick="heroGalleryGoTo(2)" aria-label="Slide 3"></button>
+          <button class="hero-gallery__dot" onclick="heroGalleryGoTo(3)" aria-label="Slide 4"></button>
+        </div>
       </div>
     </div>
 
@@ -289,6 +300,7 @@
       var box = document.getElementById('heroGallery');
       if (!box) return;
       var slides = box.querySelectorAll('.hero-gallery__slide');
+      var captions = box.querySelectorAll('.hero-gallery__caption');
       var dots = box.querySelectorAll('.hero-gallery__dot');
       var current = 0;
       var intervalMs = 3200;
@@ -296,9 +308,11 @@
 
       function show(index) {
         slides[current].classList.remove('is-active');
+        if (captions[current]) captions[current].classList.remove('is-active');
         dots[current].classList.remove('is-active');
         current = (index + slides.length) % slides.length;
         slides[current].classList.add('is-active');
+        if (captions[current]) captions[current].classList.add('is-active');
         dots[current].classList.add('is-active');
       }
 

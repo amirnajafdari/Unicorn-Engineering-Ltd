@@ -267,13 +267,16 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 .hero-gallery {
   position: absolute;
   left: 4.5%;
-  top: 30%;
+  top: 28%;
   width: 42%;
-  aspect-ratio: 16 / 9;
   z-index: 2;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 0 3px rgba(200,16,46,0.85), 0 0 0 7px rgba(255,255,255,0.12);
+}
+.hero-gallery__photo {
+  position: relative;
+  aspect-ratio: 16 / 9;
 }
 .hero-gallery__slide {
   position: absolute;
@@ -294,55 +297,60 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  box-shadow: inset 0 0 40px rgba(0,0,0,0.55);
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.35);
 }
-.hero-gallery__scrim {
-  position: absolute;
-  left: 0; right: 0; top: 0;
-  height: 42%;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0) 100%);
+
+/* Caption bar — deliberately separate from the photo so text never
+   competes with the image or its inset shadow for visibility */
+.hero-gallery__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  min-height: 76px;
+  background: linear-gradient(100deg, rgba(150,0,31,0.97) 0%, rgba(10,10,10,0.97) 100%);
 }
 .hero-gallery__caption {
-  position: absolute;
-  left: 16px;
-  top: 14px;
-  z-index: 3;
-  display: flex;
+  display: none;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+}
+.hero-gallery__caption.is-active {
+  display: flex;
+  animation: heroCaptionIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes heroCaptionIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .hero-gallery__cat {
-  font-size: 13px; font-weight: 900;
+  font-size: 12px; font-weight: 900;
   letter-spacing: 0.14em; text-transform: uppercase;
   color: #ff5468;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.85), 0 0 16px rgba(0,0,0,0.6);
 }
 .hero-gallery__title {
   font-size: clamp(19px, 2vw, 26px); font-weight: 900;
   color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6);
+  line-height: 1.15;
 }
 .hero-gallery__dots {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  z-index: 3;
   display: flex;
-  gap: 6px;
+  gap: 7px;
+  flex-shrink: 0;
 }
 .hero-gallery__dot {
-  width: 7px; height: 7px;
+  width: 8px; height: 8px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.3);
   border: none;
   padding: 0;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
-.hero-gallery__dot:hover { background: rgba(255,255,255,0.7); }
-.hero-gallery__dot.is-active { background: var(--primary); transform: scale(1.3); }
+.hero-gallery__dot:hover { background: rgba(255,255,255,0.6); }
+.hero-gallery__dot.is-active { background: #ffffff; transform: scale(1.3); }
 
 @media (max-width: 768px) {
   .hero-gallery { display: none; }
