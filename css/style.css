@@ -1192,13 +1192,13 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 
 .footer__policy-link {
   font-size: 14.5px;
-  color: rgba(255,255,255,0.4);
+  color: #ff8c1a;
   text-decoration: none;
   transition: color 0.2s;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,140,26,0.4);
   padding-bottom: 1px;
 }
-.footer__policy-link:hover { color: #fff; border-color: #fff; }
+.footer__policy-link:hover { color: #ffa64d; border-color: #ffa64d; }
 
 /* ======================================
    PAGE HERO (inner pages)
