@@ -1040,6 +1040,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   transition: color 0.2s;
 }
 .footer__value:hover { color: #fff; }
+.footer__value + .footer__value { margin-top: 4px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.12); }
 
 .footer__address {
   font-style: normal;
